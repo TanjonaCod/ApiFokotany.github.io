@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+    background-color: black;
+    color: #fff;
+    background: url('../image/360_F_77092802_l5epJqExIj3BEkeN9bEreTDepkpIPaR0.jpg') #137cb98a;
+    background-size: cover;
+    background-position: center center; 
+    background-attachment: fixed;
+    font-family: Arial, sans-serif; 
+    background-blend-mode: multiply;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.table-responsive {
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.table th, .table td {
+    text-align: center;
+    vertical-align: middle;
+    word-wrap: break-word;  /* Ensures long words don't overflow */
+    word-break: break-all;  /* Breaks long words in small screens */
+    padding: 10px;
+}
+
+/* Responsive adjustments for screens smaller than 320px */
+@media (max-width: 320px) {
+    body {
+        font-size: 12px; /* Reduce font size for smaller screens */
+    }
+
+    .container {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .clt-foko {
+        font-size: 14px;
+        padding: 5px;
+    }
+
+    .btn {
+        font-size: 14px;
+        padding: 8px 10px;
+    }
+
+    .table th, .table td {
+        padding: 6px;
+        font-size: 12px;  /* Adjust table font size for smaller screens */
+    }
+
+    #map {
+        height: 300px; /* Adjust map height */
+    }
+
+    /* Adjust footer position */
+    .footer {
+        font-size: 12px;
+    }
+}
+
+/* Additional breakpoints for larger screens */
+@media (max-width: 576px) {
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .clt-foko {
+        font-size: 16px;
+    }
+
+    .btn {
+        font-size: 16px;
+    }
+
+    .table th, .table td {
+        padding: 8px;
+    }
+}
