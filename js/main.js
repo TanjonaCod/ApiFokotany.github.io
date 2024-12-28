@@ -12,8 +12,10 @@
     const getData = async () => {
         const dataFokontany1 = await ApiFokontany2()
         let str = JSON.stringify(dataFokontany1)
+
+        let inputFoko = document.querySelector('.clt-foko').value.replace(/\s+/g, '');
         
-        const rexExp = new RegExp(`\{"commune":"[\w '-_]+","region":"[\w '-_]+","fokontany":"[\w '-_]*${document.querySelector('.clt-foko').value}[\w '-_]*","district":"[\w '-_]+"\}`, "ig")
+        const rexExp = new RegExp(`\{"commune":"[\w '-_]+","region":"[\w '-_]+","fokontany":"[\w '-_]*${inputFoko}[\w '-_]*","district":"[\w '-_]+"\}`, "ig")
         const stringifyData = JSON.stringify(dataFokontany1)
         const matchesValues = stringifyData.match(rexExp)
         
